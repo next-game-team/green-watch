@@ -9,6 +9,9 @@ public class ForestManager : MonoBehaviour
     [SerializeField] private float _yDistance = 0.1f;
     [SerializeField] private GameObject _treePrefab;
     [SerializeField] private Vector2 _treeDragDelta;
+
+
+    [SerializeField, ReadOnly] private ForestStageEnum _currentStage = ForestStageEnum.Stage0;
     
     private PolygonCollider2D _collider;
 
