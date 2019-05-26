@@ -15,6 +15,11 @@ namespace Editor.Inspector
             {
                 script.NextStage();
             }
+            
+            if(GUILayout.Button("Previous Stage"))
+            {
+                script.PreviousStage();
+            }
         }
     }
 }

@@ -15,7 +15,7 @@ public class ForestManager : MonoBehaviour
     private PolygonCollider2D _collider;
 
     private readonly List<GameObject> _treeList = new List<GameObject>();
-    private readonly Stack<List<int>> _treeDisableHistory = new Stack<List<int>>();
+    private readonly Stack<List<GameObject>> _treeDisableHistory = new Stack<List<GameObject>>();
     
     // Start is called before the first frame update
     void Start()
@@ -48,15 +48,15 @@ public class ForestManager : MonoBehaviour
         // Calculate how many trees must be cut
         var treesToDecreaseCount = _currentTreeCount - (int)(_treeCount * stageInfo.TreeCountRate);
 
-        var decreaseHistoryList = new List<int>(treesToDecreaseCount);
+        var decreaseHistoryList = new List<GameObject>(treesToDecreaseCount);
         var enabledTreeList = GetEnabledTreeList();
 
         // Decrease trees
         for (var i = 0; i < treesToDecreaseCount; i++)
         {
             var randomTreeIndex = Random.Range(0, enabledTreeList.Count); // Get random tree
-            enabledTreeList[randomTreeIndex].Value.SetActive(false); // Disable this tree
-            decreaseHistoryList.Add(enabledTreeList[randomTreeIndex].Key); // Save index of this tree
+            enabledTreeList[randomTreeIndex].SetActive(false); // Disable this tree
+            decreaseHistoryList.Add(enabledTreeList[randomTreeIndex]); // Save index of this tree
             enabledTreeList.RemoveAt(randomTreeIndex); // Remove this tree from enabled list
         }
         
@@ -66,19 +66,24 @@ public class ForestManager : MonoBehaviour
         _currentTreeCount -= treesToDecreaseCount;
     }
 
-    private List<KeyValuePair<int, GameObject>> GetEnabledTreeList()
+    public void PreviousStage()
     {
-        var enabledTreeList = new List<KeyValuePair<int, GameObject>>();
-
-        for (var index = 0; index < _treeList.Count; index++)
+        if (_currentStage == 0)
         {
-            if (_treeList[index].activeSelf)
-            {
-                enabledTreeList.Add(new KeyValuePair<int, GameObject>(index, _treeList[index]));
-            }
+            Debug.LogWarning("Min stage was already reached.");
+            return;
         }
 
-        return enabledTreeList;
+        _currentStage--;
+        var decreaseHistoryList = _treeDisableHistory.Pop();
+        _currentTreeCount += decreaseHistoryList.Count;
+
+        decreaseHistoryList.ForEach(tree => tree.SetActive(tree));
+    }
+
+    private List<GameObject> GetEnabledTreeList()
+    {
+        return _treeList.FindAll(tree => tree.activeSelf);
     }
 
     void GenerateForest()
