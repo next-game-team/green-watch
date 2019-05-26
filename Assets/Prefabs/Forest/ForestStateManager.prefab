@@ -43,13 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3e7f4cc6f36416485f32e0482af73b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stageDictionary:
-    _keys: 00000000010000000200000003000000040000000500000006000000
-    _values:
-    - {fileID: 11400000, guid: 2c710d466220542ed893b4d2fe593312, type: 2}
-    - {fileID: 11400000, guid: a6bfaeb9ada8544af8ac11d3b1729942, type: 2}
-    - {fileID: 11400000, guid: 6c9bd400fe25f480dbcba1e8c0edd790, type: 2}
-    - {fileID: 11400000, guid: 5d46922545eb14f41bd5f6360db4dad7, type: 2}
-    - {fileID: 11400000, guid: 96415c4b1f8d148b6bb413b37bcc0746, type: 2}
-    - {fileID: 11400000, guid: cd3f0b9f4075949f9a6a35edc714c8b4, type: 2}
-    - {fileID: 11400000, guid: e026ffc4187b545b1916b05944ba1560, type: 2}
+  _stageList:
+  - {fileID: 11400000, guid: 2c710d466220542ed893b4d2fe593312, type: 2}
+  - {fileID: 11400000, guid: a6bfaeb9ada8544af8ac11d3b1729942, type: 2}
+  - {fileID: 11400000, guid: 6c9bd400fe25f480dbcba1e8c0edd790, type: 2}
+  - {fileID: 11400000, guid: 5d46922545eb14f41bd5f6360db4dad7, type: 2}
+  - {fileID: 11400000, guid: 96415c4b1f8d148b6bb413b37bcc0746, type: 2}
+  - {fileID: 11400000, guid: cd3f0b9f4075949f9a6a35edc714c8b4, type: 2}
+  - {fileID: 11400000, guid: e026ffc4187b545b1916b05944ba1560, type: 2}

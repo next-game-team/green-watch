@@ -1,4 +1,4 @@
 ﻿using System;
 
 [Serializable]
-public class ForestStageDictionary : SerializableDictionary<ForestStageEnum, ForestStageInfo> {}
+public class ForestStageDictionary : SerializableDictionary<int, ForestStageInfo> {}

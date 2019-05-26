@@ -2,18 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ForestStageManager : MonoBehaviour
+public class ForestStageManager : Singleton<ForestStageManager>
 {
-    [SerializeField] private ForestStageDictionary _stageDictionary;
-}
+    public const int MaxStage = 6;
+    
+    [SerializeField] private List<ForestStageInfo> _stageList;
 
-public enum ForestStageEnum
-{
-    Stage0,
-    Stage1,
-    Stage2,
-    Stage3,
-    Stage4,
-    Stage5,
-    Stage6
+    public ForestStageInfo GetStageInfo(int stage)
+    {
+        return _stageList[stage];
+    }
 }
