@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3d4cf3f480c4d4b91a4146dd487157, type: 3}
   m_Name: ForestStage4Info
   m_EditorClassIdentifier: 
-  _treeCountRate: 0
+  _treeCountRate: 0.35
   _commonAnimalCountRate: 0
   _rareAnimalCountRate: 0
   _color: 0
