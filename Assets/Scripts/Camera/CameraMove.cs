@@ -4,6 +4,7 @@ public class CameraMove : MonoBehaviour
 {
     public float camMoveSpeed;
     public float camBorderThickness;
+    public Vector2 camPosLimit;
 
 
     void Update()
@@ -30,6 +31,9 @@ public class CameraMove : MonoBehaviour
         if(Input.mousePosition.x <= camBorderThickness) {
             pos.x -= camMoveSpeed * Time.deltaTime;
         }
+
+        pos.x = Mathf.Clamp(pos.x, -camPosLimit.x, camPosLimit.x);
+        pos.y = Mathf.Clamp(pos.y, -camPosLimit.y, camPosLimit.y);
 
         transform.position = pos;
     }
