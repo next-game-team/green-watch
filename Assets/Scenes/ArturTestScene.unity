@@ -317,6 +317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camMoveSpeed: 100
   camBorderThickness: 10
+  camPosLimit: {x: 270, y: 250}
 --- !u!1001 &5589966297871323799
 PrefabInstance:
   m_ObjectHideFlags: 0
