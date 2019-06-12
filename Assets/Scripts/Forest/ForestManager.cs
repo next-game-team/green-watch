@@ -2,9 +2,8 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class ForestManager : MonoBehaviour
+public class ForestManager : NatureManager
 {
-    [Header("Info"), SerializeField, ReadOnly, Range(0, ForestStageManager.MaxStage)] private int _currentStage;
     [SerializeField, ReadOnly] private int _treeCount;
     [SerializeField, ReadOnly] private int _currentTreeCount;
     [Header("Generation Setup"), SerializeField] private float _xDistance = 0.1f;
@@ -24,22 +23,16 @@ public class ForestManager : MonoBehaviour
         InitForest();
     }
 
-    void InitForest()
+    public void InitForest()
     {
-        _currentStage = 0;
+        _collider = GetComponent<PolygonCollider2D>();
+        InitStage();
         GenerateForest();
     }
 
-    public void NextStage()
+    protected override void OnNextStage()
     {
-        if (_currentStage == ForestStageManager.MaxStage)
-        {
-            Debug.LogWarning("Max stage was already reached.");
-            return;
-        }
-        
-        _currentStage++;
-        var stageInfo = ForestStageManager.Instance.GetStageInfo(_currentStage);
+        var stageInfo = ForestStageManager.Instance.GetStageInfo(GetCurrentStage());
         DecreaseTreeCount(stageInfo);
     }
 
@@ -66,18 +59,10 @@ public class ForestManager : MonoBehaviour
         _currentTreeCount -= treesToDecreaseCount;
     }
 
-    public void PreviousStage()
+    protected override void OnPreviousStage()
     {
-        if (_currentStage == 0)
-        {
-            Debug.LogWarning("Min stage was already reached.");
-            return;
-        }
-
-        _currentStage--;
         var decreaseHistoryList = _treeDisableHistory.Pop();
         _currentTreeCount += decreaseHistoryList.Count;
-
         decreaseHistoryList.ForEach(tree => tree.SetActive(tree));
     }
 
@@ -86,8 +71,16 @@ public class ForestManager : MonoBehaviour
         return _treeList.FindAll(tree => tree.activeSelf);
     }
 
-    void GenerateForest()
+    private void GenerateForest()
     {
+        // Clear children
+        foreach (var child in transform.GetComponentsInChildren<Tree>())
+        {
+            DestroyImmediate(child.gameObject);
+        }
+        _treeList.Clear();
+        
+        // Generate new forest
         var vector = new Vector3();
         for (var x = _collider.bounds.min.x; x < _collider.bounds.max.x; x += _xDistance)
         {

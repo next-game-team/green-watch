@@ -20,6 +20,11 @@ namespace Editor.Inspector
             {
                 script.PreviousStage();
             }
+            
+            if(GUILayout.Button("Generate forest"))
+            {
+                script.InitForest();
+            }
         }
     }
 }

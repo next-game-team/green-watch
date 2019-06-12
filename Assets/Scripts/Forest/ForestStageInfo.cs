@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [CreateAssetMenu(fileName = "ForestStageInfo", menuName = "Create Info/ForestStageInfo")]
-public class ForestStageInfo : ScriptableObject
+public class ForestStageInfo : StageInfo
 {
     [SerializeField, Range(0, 1)] private float _treeCountRate;
     [SerializeField, Range(0, 1)] private float _commonAnimalCountRate;
