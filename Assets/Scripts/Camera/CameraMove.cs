@@ -16,19 +16,19 @@ public class CameraMove : MonoBehaviour
     {
         Vector3 pos = transform.position;
 
-        if(Input.mousePosition.y >= Screen.height - camBorderThickness)
+        if(Input.GetKey(KeyCode.W) || Input.mousePosition.y >= Screen.height - camBorderThickness)
         {
             pos.y += camMoveSpeed * Time.deltaTime;
         } 
-        if(Input.mousePosition.y <= camBorderThickness) {
+        if(Input.GetKey(KeyCode.S) || Input.mousePosition.y <= camBorderThickness) {
             pos.y -= camMoveSpeed * Time.deltaTime;
         }
 
-        if(Input.mousePosition.x >= Screen.width - camBorderThickness) {
+        if(Input.GetKey(KeyCode.D) || Input.mousePosition.x >= Screen.width - camBorderThickness) {
             pos.x += camMoveSpeed * Time.deltaTime;
         }
 
-        if(Input.mousePosition.x <= camBorderThickness) {
+        if(Input.GetKey(KeyCode.A) || Input.mousePosition.x <= camBorderThickness) {
             pos.x -= camMoveSpeed * Time.deltaTime;
         }
 
