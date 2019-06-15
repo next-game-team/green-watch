@@ -19,7 +19,17 @@ public class OnClickBuild : MonoBehaviour
     {
         _animPanel.SetTrigger("Open");
         isStopMove = true;
-        GetComponent<BoxCollider2D>().enabled = false;
+
+        BoxCollider2D col1 = GetComponent<BoxCollider2D>();
+        if(col1 != null)
+        {
+            col1.enabled = true;
+        } else {
+            var col2 = GetComponent<PolygonCollider2D>();
+            col2.enabled = true;
+        }
+
+        
         if(isStopMove)
         {
             _camMove.enabled = false;
