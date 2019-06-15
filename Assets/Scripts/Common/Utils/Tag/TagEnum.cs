@@ -4,5 +4,7 @@
     Player,
     
     // Common
-    Canvas
+    Canvas,
+    
+    SelectableLine,
 }
