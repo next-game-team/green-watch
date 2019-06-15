@@ -6,13 +6,15 @@ public class CameraZoom : MonoBehaviour
 	public float minZoom = 5f;
 	public float maxZoom = 15f;
 
-    private float currentZoom = 10f;
+    private float currentZoom;
 
     private Camera cam;
 
     void Start()
     {
         cam = GetComponent<Camera>();
+        currentZoom = 500;
+        cam.orthographicSize = currentZoom;
     }
 
     void Update()
