@@ -440,16 +440,6 @@ MonoBehaviour:
   _xDistance: 30
   _yDistance: 50
   _treeDragDelta: {x: 10, y: 10}
-  _treePrefab:
-  - {fileID: 6485814583376531013, guid: 4afb87995b4de44938f577e231c1fcda, type: 3}
-  - {fileID: 3197883934816925368, guid: ae9190f13807b4415aebd300163e0d29, type: 3}
-  - {fileID: 2611333260485106864, guid: 7ab31ec9c87e64dcb858c297ed7a0d9a, type: 3}
-  - {fileID: 1482343945013320925, guid: 444a9b32e0b3b40409c5cbcb691dea9d, type: 3}
-  - {fileID: 9136957560795417158, guid: 0549876b663a54fc48a527eb255e2abf, type: 3}
-  - {fileID: 6154340728798569612, guid: 25e1653f5fbcf44688b05fe52ae3ec5f, type: 3}
-  - {fileID: 7791314031399610845, guid: 040c10a0b7618474fb6cf12752eb809c, type: 3}
-  - {fileID: 9014974690952480030, guid: 2c18e8fedeceb42edac61a13c7b8372d, type: 3}
-  - {fileID: 3387397758417274890, guid: 850f35203e2cc45bd866c19c6844521c, type: 3}
 --- !u!1 &631773142
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,6 +610,17 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: Close
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 245210222}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
