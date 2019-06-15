@@ -23,10 +23,10 @@ public class OnClickBuild : MonoBehaviour
         BoxCollider2D col1 = GetComponent<BoxCollider2D>();
         if(col1 != null)
         {
-            col1.enabled = true;
+            col1.enabled = false;
         } else {
             var col2 = GetComponent<PolygonCollider2D>();
-            col2.enabled = true;
+            col2.enabled = false;
         }
 
         
