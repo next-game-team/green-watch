@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5589966298566358747}
   - component: {fileID: 5589966298566358746}
+  - component: {fileID: 1584165011595730943}
   m_Layer: 0
-  m_Name: ForestStateManager
+  m_Name: GlobalForestManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,3 +52,27 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 96415c4b1f8d148b6bb413b37bcc0746, type: 2}
   - {fileID: 11400000, guid: cd3f0b9f4075949f9a6a35edc714c8b4, type: 2}
   - {fileID: 11400000, guid: e026ffc4187b545b1916b05944ba1560, type: 2}
+--- !u!114 &1584165011595730943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5589966298566358748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c834fa465ce504e2289a838911eb77a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _treePrefab: {fileID: 4006675944934664747, guid: 0cdc30893c8db4f208e201540d606ebd,
+    type: 3}
+  _treeSprites:
+  - {fileID: 2572236292851511218, guid: 2e84d52b4702342dda85c10e94058c1a, type: 3}
+  - {fileID: 6224024930817484846, guid: 2e84d52b4702342dda85c10e94058c1a, type: 3}
+  - {fileID: -8911251428918342384, guid: 2e84d52b4702342dda85c10e94058c1a, type: 3}
+  - {fileID: 2656247834339299217, guid: 2e84d52b4702342dda85c10e94058c1a, type: 3}
+  - {fileID: -8876335399824902483, guid: 2e84d52b4702342dda85c10e94058c1a, type: 3}
+  - {fileID: 5891757792927052577, guid: 2e84d52b4702342dda85c10e94058c1a, type: 3}
+  - {fileID: -4324799369507234631, guid: 2e84d52b4702342dda85c10e94058c1a, type: 3}
+  - {fileID: 759678483730449176, guid: 2e84d52b4702342dda85c10e94058c1a, type: 3}
+  - {fileID: 7748518322702929914, guid: 2e84d52b4702342dda85c10e94058c1a, type: 3}

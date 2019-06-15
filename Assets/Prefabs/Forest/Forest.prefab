@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2425388210633561640
+--- !u!1 &7139035622326562899
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,37 +8,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2425388210633561642}
-  - component: {fileID: 2425388210633561643}
-  - component: {fileID: 2425388210633561645}
+  - component: {fileID: 7139035622326562897}
+  - component: {fileID: 7139035622326562896}
+  - component: {fileID: 7139035622326562902}
   m_Layer: 0
   m_Name: Forest
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2425388210633561642
+--- !u!4 &7139035622326562897
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2425388210633561640}
+  m_GameObject: {fileID: 7139035622326562899}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -394, y: 345, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &2425388210633561643
+--- !u!60 &7139035622326562896
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2425388210633561640}
+  m_GameObject: {fileID: 7139035622326562899}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -63,23 +63,21 @@ PolygonCollider2D:
       - {x: -41.860573, y: -160.8222}
       - {x: 162.64467, y: -155.38432}
       - {x: 123.30005, y: 156.9754}
---- !u!114 &2425388210633561645
+--- !u!114 &7139035622326562902
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2425388210633561640}
+  m_GameObject: {fileID: 7139035622326562899}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70ccf2cfad22549f5aad70e7781fc5bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _currentStage: 0
-  _treeCount: 0
-  _currentTreeCount: 0
+  _treeCount: 52
+  _currentTreeCount: 52
   _xDistance: 30
   _yDistance: 50
   _treeDragDelta: {x: 10, y: 10}
-  _treePrefab: {fileID: 8090666758987779636, guid: 0cdc30893c8db4f208e201540d606ebd,
-    type: 3}
