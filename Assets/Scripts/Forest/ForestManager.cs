@@ -9,7 +9,7 @@ public class ForestManager : NatureManager
     [Header("Generation Setup"), SerializeField] private float _xDistance = 0.1f;
     [SerializeField] private float _yDistance = 0.1f;
     [SerializeField] private Vector2 _treeDragDelta;
-    [SerializeField] private GameObject _treePrefab;
+    [SerializeField] private GameObject[] _treePrefab;
     
     private PolygonCollider2D _collider;
 
@@ -94,7 +94,8 @@ public class ForestManager : NatureManager
 
                 if (_collider.OverlapPoint(vector))
                 {
-                    var tree = Instantiate(_treePrefab, vector, Quaternion.identity, transform);
+                    var randomTree = _treePrefab[Random.Range(0, _treePrefab.Length)];
+                    var tree = Instantiate(randomTree, vector, Quaternion.identity, transform);
                     _treeList.Add(tree);
                 }
             }
