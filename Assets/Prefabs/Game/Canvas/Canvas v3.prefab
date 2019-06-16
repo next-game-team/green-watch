@@ -3720,11 +3720,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8782424157275222164}
     m_Modifications:
-    - target: {fileID: 1533066975987825504, guid: 289baea9dfbff43e486db8dab6383959,
-        type: 3}
-      propertyPath: m_Name
-      value: ForestInfoPanel
-      objectReference: {fileID: 0}
     - target: {fileID: 1533066975987825505, guid: 289baea9dfbff43e486db8dab6383959,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3830,15 +3825,31 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 2794244671202188444, guid: 289baea9dfbff43e486db8dab6383959,
+    - target: {fileID: 1533066975987825504, guid: 289baea9dfbff43e486db8dab6383959,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 3
+      propertyPath: m_Name
+      value: ForestInfoPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 1533066976884719321, guid: 289baea9dfbff43e486db8dab6383959,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: aa0795a2e5f2e4b02ac40cb66b903df0,
+        type: 3}
+    - target: {fileID: 1533066976884719321, guid: 289baea9dfbff43e486db8dab6383959,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6999805685003832949, guid: 289baea9dfbff43e486db8dab6383959,
         type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2794244671202188444, guid: 289baea9dfbff43e486db8dab6383959,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8932264736664804339, guid: 289baea9dfbff43e486db8dab6383959,
         type: 3}
