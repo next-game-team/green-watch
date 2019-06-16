@@ -29,6 +29,11 @@ public class ForestManager : NatureManager
         GenerateForest();
     }
 
+    protected override bool IsLastStage()
+    {
+        return ForestStageManager.Instance.IsLastStage(GetCurrentStage());
+    }
+
     protected override void OnNextStage()
     {
         var stageInfo = ForestStageManager.Instance.GetStageInfo(GetCurrentStage());

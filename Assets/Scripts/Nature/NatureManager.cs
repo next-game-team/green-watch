@@ -14,9 +14,11 @@ public abstract class NatureManager : MonoBehaviour
         return _currentStage;
     }
 
+    protected abstract bool IsLastStage();
+
     public void NextStage()
     {
-        if (ForestStageManager.Instance.IsLastStage(_currentStage))
+        if (IsLastStage())
         {
             Debug.LogWarning("Max stage was already reached.");
             return;

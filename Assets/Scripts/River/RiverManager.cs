@@ -12,6 +12,11 @@ public class RiverManager : NatureManager
         InitStage();
     }
 
+    protected override bool IsLastStage()
+    {
+        return RiverStageManager.Instance.IsLastStage(GetCurrentStage());
+    }
+    
     protected override void OnNextStage()
     {
         _spriteRenderer.color = RiverStageManager.Instance.GetStageInfo(GetCurrentStage()).RiverColor;
