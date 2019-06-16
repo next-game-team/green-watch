@@ -12,6 +12,9 @@ public class ButtonPanelControl : MonoBehaviour
     {
         isOpen = true;
         arrowSprite.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+        Canvas can = GetComponent<Canvas>();
+        can.renderMode = RenderMode.ScreenSpaceCamera;
     }
 
     public void OpenClosePanel()
