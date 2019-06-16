@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: RiverStage1Info
   m_EditorClassIdentifier: 
   _pdkLimit: 0.1
-  _riverColor: {r: 1, g: 1, b: 1, a: 0}
+  _riverColor: {r: 0.9, g: 0.9, b: 0.9, a: 1}
   _color: 1
