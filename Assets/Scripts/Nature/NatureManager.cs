@@ -1,8 +1,20 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
+
+public class OnUpdateEvent : UnityEvent<InfoPanelData>
+{
+}
 
 public abstract class NatureManager : InfoPanelDataGetter
 {
     [Header("Info"), SerializeField, ReadOnly] private int _currentStage;
+
+    protected OnUpdateEvent OnUpdateEvent;
+
+    protected virtual void Start()
+    {
+        OnUpdateEvent = new OnUpdateEvent();
+    }
 
     protected void InitStage()
     {
@@ -26,6 +38,7 @@ public abstract class NatureManager : InfoPanelDataGetter
 
         _currentStage++;
         OnNextStage();
+        OnUpdateEvent.Invoke(GetInfoPanelData());
     }
 
     protected abstract void OnNextStage();
@@ -40,6 +53,7 @@ public abstract class NatureManager : InfoPanelDataGetter
 
         _currentStage--;
         OnPreviousStage();
+        OnUpdateEvent.Invoke(GetInfoPanelData());
     }
 
     protected abstract void OnPreviousStage();

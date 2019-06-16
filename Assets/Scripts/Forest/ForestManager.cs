@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UI.InfoPanel.data;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -16,8 +17,9 @@ public class ForestManager : NatureManager
     private readonly Stack<List<GameObject>> _treeDisableHistory = new Stack<List<GameObject>>();
     
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         _collider = GetComponent<PolygonCollider2D>();  
         InitForest();
     }
@@ -113,6 +115,7 @@ public class ForestManager : NatureManager
 
     public override InfoPanelData GetInfoPanelData()
     {
-        return null;
+        return new ForestInfoPanelData(ForestStageManager.Instance.GetStageInfo(GetCurrentStage()),
+            OnUpdateEvent, this);
     }
 }

@@ -1,14 +1,13 @@
-﻿using UI.InfoPanel.data;
-using UnityEngine;
+﻿using UI.InfoPanel.controller;
+using UI.InfoPanel.data;
 
-public class RiverInfoPanelController : InfoPanelController
-{
+public class RiverInfoPanelController : NatureInfoPanelController
+{ 
 
-    [SerializeField] private NatureStateShower _stateShower; 
-    
-    protected override void FillData(InfoPanelData data)
+    protected override void UpdateData(InfoPanelData data)
     {
         var riverData = (RiverInfoPanelData) data;
-        _stateShower.ShowState(riverData.StageInfo.Color);      
+        _stateShower.ShowState(riverData.StageInfo.Color);
     }
+    
 }

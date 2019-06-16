@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7139035622326562897}
   - component: {fileID: 7139035622326562896}
   - component: {fileID: 7139035622326562902}
+  - component: {fileID: 1879827238}
   m_Layer: 0
   m_Name: Forest
   m_TagString: Untagged
@@ -61,7 +62,9 @@ PolygonCollider2D:
       - {x: -171.75705, y: 54.698776}
       - {x: -97.71714, y: -127.30828}
       - {x: -41.860573, y: -160.8222}
-      - {x: 162.64467, y: -155.38432}
+      - {x: 108.793945, y: -152.12064}
+      - {x: 173.03734, y: -6.7428894}
+      - {x: 163.75128, y: 85.22156}
       - {x: 123.30005, y: 156.9754}
 --- !u!114 &7139035622326562902
 MonoBehaviour:
@@ -81,3 +84,17 @@ MonoBehaviour:
   _xDistance: 30
   _yDistance: 50
   _treeDragDelta: {x: 10, y: 10}
+--- !u!114 &1879827238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7139035622326562899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa3abf50261343969e03a7c5532d6de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _infoPanel: 0
+  _infoPanelDataGetter: {fileID: 7139035622326562902}

@@ -15,4 +15,4 @@ MonoBehaviour:
   _treeCountRate: 0
   _commonAnimalCountRate: 0
   _rareAnimalCountRate: 0
-  _color: 0
+  _color: 5

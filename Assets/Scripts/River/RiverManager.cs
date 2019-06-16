@@ -7,8 +7,9 @@ public class RiverManager : NatureManager
     private SpriteRenderer _spriteRenderer;
     
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         InitStage();
     }
@@ -30,6 +31,7 @@ public class RiverManager : NatureManager
 
     public override InfoPanelData GetInfoPanelData()
     {
-        return new RiverInfoPanelData(RiverStageManager.Instance.GetStageInfo(GetCurrentStage()));
+        return new RiverInfoPanelData(RiverStageManager.Instance.GetStageInfo(GetCurrentStage()),
+            OnUpdateEvent, this);
     }
 }
