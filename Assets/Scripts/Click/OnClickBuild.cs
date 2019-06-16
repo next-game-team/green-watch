@@ -8,6 +8,8 @@ public class OnClickBuild : MonoBehaviour
 
     void Start()
     {
+        gameObject.layer = 9;
+
         isStopMove = false;
         if(!isStopMove)
         {
@@ -17,22 +19,25 @@ public class OnClickBuild : MonoBehaviour
 
     void OnMouseDown()
     {
-        _animPanel.SetTrigger("Open");
-        isStopMove = true;
-
-        BoxCollider2D col1 = GetComponent<BoxCollider2D>();
-        if(col1 != null)
+        if(CursorStateManager.Instance.stateC == StateCursor.GameObjects)
         {
-            col1.enabled = false;
-        } else {
-            var col2 = GetComponent<PolygonCollider2D>();
-            col2.enabled = false;
-        }
+            _animPanel.SetTrigger("Open");
+            isStopMove = true;
 
-        
-        if(isStopMove)
-        {
-            _camMove.enabled = false;
+            BoxCollider2D col1 = GetComponent<BoxCollider2D>();
+            if(col1 != null)
+            {
+                col1.enabled = false;
+            } else {
+                var col2 = GetComponent<PolygonCollider2D>();
+                col2.enabled = false;
+            }
+
+            
+            if(isStopMove)
+            {
+                _camMove.enabled = false;
+            }
         }
     }
 }
