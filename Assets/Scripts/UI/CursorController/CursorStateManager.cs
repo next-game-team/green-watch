@@ -13,6 +13,7 @@ public class CursorStateManager : MonoBehaviour
 
     [SerializeField] private Camera _cam;
 
+    [ReadOnly]
     public StateCursor stateC;
 
     void Awake()

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public abstract class NatureManager : MonoBehaviour
+public abstract class NatureManager : InfoPanelDataGetter
 {
     [Header("Info"), SerializeField, ReadOnly] private int _currentStage;
 

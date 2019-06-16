@@ -1,8 +1,10 @@
-﻿using UnityEngine;
+﻿using UI.InfoPanel.data;
+using UnityEngine;
 
 public class OnClickBuild : MonoBehaviour
 {
     [SerializeField] private InfoPanelEnum _infoPanel;
+    [SerializeField] private InfoPanelDataGetter _infoPanelDataGetter;
 
     void Start()
     {
@@ -11,9 +13,10 @@ public class OnClickBuild : MonoBehaviour
 
     void OnMouseDown()
     {
-        if(GlobalInfoPanelManager.Instance.IsPanelFree)
+        if(GlobalInfoPanelManager.Instance.IsPanelFree 
+           && CursorStateManager.Instance.stateC == StateCursor.GameObjects)
         {
-            GlobalInfoPanelManager.Instance.OpenPanel(_infoPanel);
+            GlobalInfoPanelManager.Instance.OpenPanel(_infoPanel, _infoPanelDataGetter.GetInfoPanelData());
         }
     }
 }

@@ -357,4 +357,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa3abf50261343969e03a7c5532d6de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animPanel: {fileID: 0}
+  _infoPanel: 1
+  _infoPanelDataGetter: {fileID: 3339583258514133704}

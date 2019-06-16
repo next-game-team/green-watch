@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class InfoPanelController : MonoBehaviour
+public abstract class InfoPanelController : MonoBehaviour
 {
     private Animator _animator;
     
@@ -10,10 +10,13 @@ public class InfoPanelController : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
-    public void Show()
+    public void Show(InfoPanelData data)
     {
         _animator.SetTrigger("Open");
+        FillData(data);
     }
+
+    protected abstract void FillData(InfoPanelData data);
 
     public void OnClose()
     {

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UI.InfoPanel.data;
+using UnityEngine;
 
 public class RiverManager : NatureManager
 {
@@ -25,5 +26,10 @@ public class RiverManager : NatureManager
     protected override void OnPreviousStage()
     {
         _spriteRenderer.color = RiverStageManager.Instance.GetStageInfo(GetCurrentStage()).RiverColor;
+    }
+
+    public override InfoPanelData GetInfoPanelData()
+    {
+        return new RiverInfoPanelData(RiverStageManager.Instance.GetStageInfo(GetCurrentStage()));
     }
 }

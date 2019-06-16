@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UI.InfoPanel.data;
 using UnityEngine;
 
 public class GlobalInfoPanelManager : Singleton<GlobalInfoPanelManager>
@@ -16,18 +17,19 @@ public class GlobalInfoPanelManager : Singleton<GlobalInfoPanelManager>
         _isPanelFree = true;
     }
 
-    public void OpenPanel(InfoPanelEnum infoPanel)
+    public void OpenPanel(InfoPanelEnum infoPanel, InfoPanelData data)
     {
         _isPanelFree = false;
         _camMove.enabled = false;
         _currentInfoPanel = _infoPanelDictionary[infoPanel];
-        _currentInfoPanel.Show();
+        _currentInfoPanel.Show(data);
     }
     
     public void ClosePanel()
     {
         _isPanelFree = true;
         _camMove.enabled = true;
+        _currentInfoPanel.Close();
         _currentInfoPanel = null;
     }
 }

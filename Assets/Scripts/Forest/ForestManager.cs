@@ -110,4 +110,9 @@ public class ForestManager : NatureManager
         _treeCount = _treeList.Count;
         _currentTreeCount = _treeCount;
     }
+
+    public override InfoPanelData GetInfoPanelData()
+    {
+        return null;
+    }
 }
