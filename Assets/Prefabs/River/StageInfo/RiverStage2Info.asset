@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d91ddea958d7428e930584e006fae43, type: 3}
   m_Name: RiverStage2Info
   m_EditorClassIdentifier: 
-  _pdkLimit: 0.3
+  _fosforAmount: 0.4
+  _jelezoAmount: 0.5
+  _no2Amount: 0.6
+  _no3Amount: 0.7
   _riverColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
   _color: 2

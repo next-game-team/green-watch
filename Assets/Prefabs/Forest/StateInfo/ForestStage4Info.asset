@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: ForestStage4Info
   m_EditorClassIdentifier: 
   _treeCountRate: 0.35
-  _commonAnimalCountRate: 0
-  _rareAnimalCountRate: 0
+  _rabbitCountRate: 0.5
+  _foxCountRate: 0.4
+  _owlCountRate: 0.3
+  _lynxCountRate: 0.2
   _color: 3
